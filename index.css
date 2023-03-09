@@ -8,6 +8,7 @@ a{
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body{
     overflow-x: hidden;
@@ -611,6 +612,12 @@ header{
 }
 
 
+@media screen and (max-width : 500px) {
+    .active nav{
+        width: 100%;
+    }
+}
+
 
 
 @media screen and (max-width : 800px) {
@@ -620,18 +627,15 @@ header{
     .home{
         width: 100vw;
         height: 110vh;
-        margin-top: 10rem;
-    }
-    .home .container{
-        flex-direction: column-reverse;
-        gap : 0px;
     }
     .home .images {
         width: 15rem;
         height: 15rem;
     }
     .home .container{
-        margin-top: 8rem;
+        flex-direction: column-reverse;
+        gap : 0px;
+        margin-top: 5rem;
         padding: 1rem;
     }
     .home .container .content{
