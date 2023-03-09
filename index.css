@@ -614,7 +614,10 @@ header{
 
 @media screen and (max-width : 500px) {
     .active nav{
-        width: 100%;
+        width: 80% !important;
+    }
+    .icons .icon{
+        margin: 0px 5px;
     }
 }
 
@@ -732,7 +735,21 @@ header{
         right: -30rem;
         background-color: black;
     }
-
+    .active nav a:nth-of-type(1){
+        animation: fromright ease-out 1s 1 forwards;
+    }
+    .active nav a:nth-of-type(2){
+        animation: fromright ease-out 2s 1 forwards;
+    }
+    .active nav a:nth-of-type(3){
+        animation: fromright ease-out 3s 1 forwards;
+    }
+    .active nav a:nth-of-type(4){
+        animation: fromright ease-out 4s 1 forwards;
+    }
+    .active nav a:nth-of-type(5){
+        animation: fromright ease-out 5s 1 forwards;
+    }
     .about .abouContainer .aboutContent h1{
         font-size: 3.5rem;
     }

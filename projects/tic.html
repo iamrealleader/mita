@@ -136,6 +136,10 @@ const changeturn = () => {
                  if( ( turnn[e[0]].innerText === turnn[e[1]].innerText )  && (turnn[e[1]].innerText === turnn[e[2]].innerText ) &&  ( turnn[e[0]].innerText !== '' ))
                  {
                      winner.innerText = `The Winner is : ${turnn[e[0]].innerText}`;
+                     setTimeout(() => {
+                         window.alert(`winner is ${turnn[e[0]].innerText}`);
+                         location.reload();
+                     }, 200);
                  }
             })
      }
