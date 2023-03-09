@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Game </title>
+</head>
+<style>
+      
+      *{
+          margin: 0;
+          padding: 0;
+      }
+
+      body{
+          overflow: hidden;
+      }
+      .container{
+          width: 100vw;
+          height: 90vh;
+          background: url(sky.jpg) no-repeat;
+          position: relative ;
+      }
+
+      .car{
+          width: 300px;
+          height: 150px;
+          background: url(car.png) no-repeat;
+          background-size: contain;
+          position: absolute ;
+          bottom: -30px;
+          left: 30vw;
+
+      }
+
+      .tyre{
+          width: 80px;
+          height: 80px;
+          background: url(tyres.png) no-repeat;
+          background-size: contain;
+          position: absolute ;
+          bottom: 0px;
+          left: 60vw;
+      }
+
+      .tyreAnimation{
+          animation: mov 3s linear infinite;
+      }
+        
+      .div{
+          visibility: hidden;
+          width: 100vw;
+          height: 20vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          bottom: 500px;
+          color: white;
+      }
+      .h2{
+          background-color: yellow;
+          color: black;
+          padding: 10px;
+      }
+
+      @keyframes mov {
+          0%{
+              left: 100vw;
+              transform: rotate(0deg);
+          } 
+              100%{
+              transform: rotate(-2000deg);
+              left: 0px;
+          }
+      }
+</style>
+<body>
+   <div class="container">
+     <div class="car"></div>
+     <div class="tyre tyreAnimation"></div>
+     <div class="score"></div>
+   </div> 
+   <div class="div">
+     <h1>Game Over Please Try again</h1>
+     <h2 class="h2">Press SPACE key to Start Again</h2>
+   </div>
+
+
+  <script>
+        
+ let score = 0;
+ let gameover = false;
+ let car = document.querySelector('.car');
+ let tyre = document.querySelector('.tyre');
+ let div = document.querySelector('.div');
+ let animation = document.querySelector('.tyreAnimation');
+ document.onkeydown = function (e){
+        // console.log( 'key code is : ', e.keyCode);
+        if(e.keyCode == 38  && gameover != true)
+        {
+            let carX = parseInt(window.getComputedStyle(car,null).getPropertyValue('bottom'));                                                                                                                                                                                                                                                                      
+            if(carX < 120)
+            {
+                car.style.bottom = carX + 150 + 'px';
+            }
+            setTimeout(() => {
+                let carX = parseInt(window.getComputedStyle(car,null).getPropertyValue('bottom'));                                                                                                                                                                                                                                                                       
+                car.style.bottom = carX - 150 + 'px';
+            }, 300);
+        }
+        if(e.keyCode == 39  && gameover != true)
+        {
+            let carY = parseInt(window.getComputedStyle(car,null).getPropertyValue('left')); 
+            car.style.left = carY + 300 + "px";
+        }
+        if(e.keyCode == 37  && gameover != true)
+        {
+            let carY = parseInt(window.getComputedStyle(car,null).getPropertyValue('left')); 
+            car.style.left = carY - 300 + "px";
+        }
+        if(e.keyCode == 32)
+        {
+            location.reload();
+        }
+    }
+
+    setInterval(() => {
+        
+        let carx = parseInt(window.getComputedStyle(car,null).getPropertyValue('left'));
+        let cary = parseInt(window.getComputedStyle(car,null).getPropertyValue('bottom'));
+
+        let tyrex = parseInt(window.getComputedStyle(tyre,null).getPropertyValue('left'));
+        let tyrey = parseInt(window.getComputedStyle(tyre,null).getPropertyValue('bottom'));
+        let totalx = Math.abs(carx-tyrex);
+        let totaly = Math.abs(cary-tyrey);
+        // console.log(totalx,totaly);
+        if(totalx< 150 && totaly<100)
+        {
+            gameover = true;
+            tyre.classList.remove('tyreAnimation');
+            div.style.visibility = 'visible';
+        }
+        else if (totalx < 200)
+        {
+            score += 1;
+            let duration = parseInt(animation.style= 'animation-duration');
+            console.log(duration);
+        }
+    }, 200);
+
+   
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+                .mob{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(211, 198, 16);
+        }
+        .container{
+            height: 400px;
+            width: 350px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-end;
+            align-items: center;
+            background-color: white;
+        }
+        .rows{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            height: 40px;
+            width: 70px; 
+            margin: 4px;
+            border: none;
+            font-size: 24px;
+            font-weight: bolder;
+            border-radius: 5px;
+        }
+        .btn:hover{
+            color: white;
+            background-color: black;
+        }
+        #equal{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 150px;
+            color: white;
+            background-color: rgb(35, 206, 35);
+            font-size: 35px;
+        }
+        #equal:hover{
+            background-color: blue;
+        }
+        #input{
+            border-radius: 10px;
+            font-size: 30px;
+            margin: 10px;
+            height: 60px;
+            width: 300px;
+            border: none;
+            background-color: rgb(228, 225, 236);
+        }
+
+        .green{
+            color: rgb(12, 33, 153);
+        }
+    </style>
+</head>
+<body>
+    <div class="mob">
+    <div class="container">
+        <div class="rows">
+            <input type="text " id="input">
+        </div>
+        <div class="rows">
+            <button class="btn green" id="">*</button>
+            <button class="btn green" id="">/</button>
+            <button class="btn green" id="">D</button>
+            <button class="btn green" id="">C</button>
+        </div>
+        <div class="rows">
+            <button class="btn" id="">7</button>
+            <button class="btn" id="">8</button>
+            <button class="btn" id="">9</button>
+            <button class="btn green" id="">-</button>
+        </div>
+        <div class="rows">
+            <button class="btn" id="">4</button>
+            <button class="btn" id="">5</button>
+            <button class="btn" id="">6</button>
+            <button class="btn green" id="">+</button>
+        </div>
+        <div class="rows">
+            <button class="btn" id="">1</button>
+            <button class="btn" id="">2</button>
+            <button class="btn" id="">3</button>
+            <button class="btn green" id="">.</button>
+        </div>
+        <div class="rows">
+            <button class="btn green" id="">%</button>
+            <button class="btn" id="">0</button>
+            <button class="btn" id="equal">=</button>
+        </div>
+    </div>
+  </div>
+    
+
+  <script>
+         
+
+  let string = '';
+  let btn = document.querySelectorAll('.btn');
+  Array.from(btn).forEach( (button) => {
+      button.addEventListener('click', (e) => {
+        let input = document.getElementById('input');
+         try{
+          if(e.target.innerHTML == '=')
+          {
+            let sol = eval(string);
+            input.value = sol;
+            string = ''+ sol;
+          }
+          else if (e.target.innerHTML == 'D')
+          {
+            string = string.slice(0,-1);
+            input.value = string;
+          }
+          else if (e.target.innerHTML == 'C')
+          {
+            input.value = '';
+            string = '';
+          }          
+        else
+        {
+          string += e.target.innerHTML;
+          input.value = string;
+        }
+      }
+        catch{
+          input.value = 'Sytax Error';
+        }
+      })
+  })
+  </script>
+</body>
+</html>

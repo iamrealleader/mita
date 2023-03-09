@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          * {
+            border: 0;
+            margin: 0;
+            box-sizing: border-box;
+            }
+
+            :root {
+            --mobile-width: 325px;
+            --mobile-height: 670px;
+            --mobile-radius: 25px;
+            --separator-height: 500px;
+            --bg: #fdf3f2;
+            --mobile-bg: #fdeae6;
+            --intro-bg: #eed7d1;
+            --font-color: #807b7b;
+            --transition: transform 0.7s ease-in-out;
+            }
+
+            .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg);
+            }
+
+            .mobile-layout {
+            width: var(--mobile-width);
+            height: var(--mobile-height);
+            /* margin: 30px 0; */
+            /* border-radius: var(--mobile-radius); */
+            perspective: 500px;
+            overflow: hidden;
+            /* color: var(--font-color); */
+            /* background-color: var(--mobile-bg); */
+            /* box-shadow: 36px 36px 50px 15px #eed7d1d1; */
+            }
+            .mobile-layout .book-cover {
+            position: relative;
+            height: var(--separator-height);
+            width: calc(var(--mobile-width) * 2);
+            left: -52.5%;
+            border-top-left-radius: var(--mobile-radius);
+            border-top-right-radius: var(--mobile-radius);
+            background-color: var(--intro-bg);
+            transform-style: preserve-3d;
+            transform-origin: 50% 40%;
+            transition: var(--transition);
+            z-index: 4;
+            }
+            .mobile-layout .book-top {
+            width: 170px;
+            position: absolute;
+            top: 180px;
+            left: 250px;
+            z-index: 5;
+            transform: translateZ(28.5px);
+            }
+            .mobile-layout .book-side {
+            position: absolute;
+            top: 430px;
+            left: 222px;
+            transform: translateY(-15px) translateX(0px) translateZ(15px) rotateX(104deg);
+            }
+            .mobile-layout .book-cover:hover {
+            transform: rotateX(75deg) translateZ(3px) scale(0.75);
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mobile-layout"> 
+          <div class="book-cover">
+              <img class="book-top" src="https://raw.githubusercontent.com/atomic-variable/images-repo/e37f432405904a280858e5437ce1960753bc78a3/book-top.svg" alt="book-top" />
+              <img class="book-side" src="https://raw.githubusercontent.com/atomic-variable/images-repo/e37f432405904a280858e5437ce1960753bc78a3/book-side.svg" alt="book-side" /> 
+          </div>
+        </div>
+      </div>
+      
+      <!--
+      https://saranyamk.github.io/images-repo/book-top.svg
+      https://saranyamk.github.io/images-repo/book-side.svg
+      -->
+</div>
+</body>
+</html>

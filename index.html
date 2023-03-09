@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mita | A personal portfolio website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><img src="./assets/Mita.png" alt=""></div>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#about">About Us</a>
+        </nav>
+        <div class="menueIcon">
+        <div class="menue">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="home">
+            <div class="container flex-between">
+                <div class="content">
+                    <h2 class="hello">Hello, its me.</h2>
+                    <h1>Sabir Khan</h1>
+                    <div class="special"><h2> And I'm  <span class="text"></span></h2></div>
+                    <button class="btn"><a href="#about">Learn more</a></button>
+                    <div class="icons">
+                        <div class="icon icon1"><i class="fa fa-facebook"></i></div>
+                        <div class="icon icon2"><i class="fa fa-whatsapp"></i></div>
+                        <div class="icon icon3"><i class="fa fa-twitter"></i></div>
+                        <div class="icon icon4"><i class="fa fa-instagram"></i></div>
+                    </div>
+                </div>
+                <img class="images" src="./assets/profile.png" alt="">
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <h2>FEATURES</h2>
+            <h1>Our Features & Services</h1>
+            <div class="grid">  
+                <div class="box reveal box-1 flex-column">
+                    <img src="./assets/responsive-design.png" alt="">
+                    <div class="content flex-column">
+                        <h1>Responsive-design</h1>
+                        <p> We try to create a responsive website for user taht works on different divices perfectly and accurately and give a user best experience on different devices.</p>
+                        <button class="btn"><a href="#about">More</a></button>
+                    </div>
+                </div>
+                <div class="box reveal box-2 flex-column">
+                    <img src="./assets/bug.png" alt="">
+                    <div class="content flex-column">
+                        <h1>Free Debugging</h1>
+                        <p> If there is any bug in website, we fix it for free for a user and if a user don't like something in it we remove , update and fix it for free!</p>
+                        <button class="btn"><a href="#about">More</a></button>
+                    </div>
+                </div>
+                <div class="box reveal box-3 flex-column">
+                    <img src="./assets/24-7.png" alt="">
+                    <div class="content flex-column">
+                        <h1>Avaiable 24/7</h1>
+                        <p>We are Avaible 24/7 to create a website for a userand avaible 24/7 for user to provide some value to a user.</p>
+                        <button class="btn"><a href="#about">More</a></button>
+                    </div>
+                </div>
+                <div class="box reveal box-4 flex-column">
+                    <img src="./assets/database.png" alt="">
+                    <div class="content flex-column">
+                        <h1>Free Hosting</h1>
+                        <p> we host a website on given hosting server by user for free for a user to save his time and also purchase a hosting plan for a user if he dont have any hosting.</p>
+                        <button class="btn"><a href="#about">More</a></button>
+                    </div>
+                </div>
+                <div class="box reveal box-5 flex-column">
+                    <img src="./assets/fast-delivery.png" alt="">
+                    <div class="content flex-column">
+                        <h1>Fast Delivery</h1>
+                        <p>We try to deliver website faster within that given time by user.And ensure that the website is working perfectly and according to the expectation of a user</p>
+                        <button class="btn"><a href="#about">More</a></button>
+                    </div>
+                </div>
+                <div class="box reveal box-6 flex-column">
+                    <img src="./assets/free.png" alt="">
+                    <div class="content flex-column">
+                        <h1>Free HTTPs</h1>
+                        <p> We Give free HTTP cerficate to ensure the security of website to a user so, that the user login and safly and trust the this website.</p>
+                        <button class="btn"><a href="#about">More</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="projects">
+            <h1 class="text-center">FEATURES</h1>
+            <div class="grid">  
+                <div class="box reveal">
+                    <a href="./projects/calculator.html" target="_blank" class="box box-1 flex-column">
+                        <img src="./assets/calculator.jpg" alt="">
+                    </a>
+                </div>
+                <div class="box reveal">
+                    <a href="./projects/tic.html" target="_blank" class="box box-1 flex-column">
+                        <img src="./assets/tic.jpg" alt="">
+                    </a>
+                </div>
+                <div class="box reveal">
+                    <a href="./projects/dino.html" target="_blank" class="box box-1 flex-column">
+                        <img src="./assets/racingcar.jpg" alt="">
+                    </a>
+                </div>
+                <div class="box reveal">
+                    <a href="./projects/watch.html" target="_blank" class="box box-1 flex-column">
+                        <div class="stick"></div>
+                        <img class="watch" src="./assets/watchPic.gif" alt="">
+                    </a>
+                </div>
+               
+            </div>
+        </section>
+
+        
+        <section id="contact" class="contact reveal">
+            <h1 class="text-center">Contact us</h1>
+            <div class='contact'>
+                <form class="form">
+                     <h1>Send us a message</h1>
+                     <div class="inputBox">
+                         <input class='value' type="text" name="name" id="name" required/>
+                         <label for="name">Name</label>
+                     </div>
+                     <div class="inputBox">
+                         <input class='value' type="email" name="email" id="email" required/>
+                         <label for="email">Email</label>
+                     </div>
+                     <div class="inputBox">
+                         <textarea class='value' name="text" id="text" cols="50" rows="10" required></textarea>
+                         <label for="text">Message</label>
+                         <input type="submit" class='btn'/>
+                     </div> 
+                </form>
+             </div>
+        </section>
+
+
+        <section class="about reveal" id="about">
+            <div class="abouContainer flex-row">
+                <div class="aboutContent">
+                    <h1>About us</h1>
+                    <p>I am front-end Devlpoer that can create a static website for you with free HTTPs certifcate with help of pure Html,Css,Scss,Js,React so, that the work fast and efficently 24/7.</p>
+                    <p>Our goal is to give more value to a user than the user pay to us. we deploy website for a user for free and also fix any type of error for free!</p>
+                    <button class="btn">Read more</button>
+                </div>
+                <img src="./assets/about.png" alt="" />
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+        <div class="grid">
+           <nav class="box reveal nav">
+              <a href="#home">Home</a>
+              <a href="#services">Services</a>
+              <a href="#projects">Projects</a>
+              <a href="#contact">Contact Us</a>
+          </nav>
+           <nav class="box reveal nav">
+              <a href="#">Term and Services</a>
+              <a href="#">FAQs</a>
+              <a href="#">About</a>
+              <a href="#">Help</a>
+          </nav>
+          <div class="box reveal">
+            <h1>Folow us</h1>
+            <div class="icons">
+                <div class="icon icon1"><i class="fa fa-facebook"></i></div>
+                <div class="icon icon2"><i class="fa fa-whatsapp"></i></div>
+                <div class="icon icon3"><i class="fa fa-twitter"></i></div>
+                <div class="icon icon4"><i class="fa fa-instagram"></i></div>
+            </div>
+            <h2>Send us Message</h2>
+            <form action="#" class="form">
+                <div class="inputBox">
+                    <input class='value' type="text" name="message" id="message" required/>
+                    <label for="message">Message</label>
+                </div>
+                <input class="btn" type="submit" value="Send">
+            </form>
+          </div>
+        </div>
+       </div>
+        <hr>
+        <div class="faq">
+            &copy; Copyright All right reserved.
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="index.js"></script>
+</body>
+</html>
