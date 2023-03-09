@@ -387,6 +387,7 @@ header{
     width: fit-content;
  }
  .projects h1{
+     margin: 1rem 0rrem;
      font-size: 2rem;
      color: rgb(0, 21, 255);
  }
